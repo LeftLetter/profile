@@ -1,5 +1,5 @@
 <template>
-  <h1 v-if="level === 1">{{ text }}</h1>
+  <h1 v-if="level === 1" class="">{{ text }}</h1>
   <h2 v-else-if="level === 2">{{ text }}</h2>
   <h3 v-else-if="level === 3">{{ text }}</h3>
   <h4 v-else-if="level === 4">{{ text }}</h4>
@@ -18,9 +18,29 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    level: { type: Number, default: 2 } as PropOptions<Header>,
+    level: { type: Number, default: 1 } as PropOptions<Header>,
+    visualLevel: { type: Number, default: 1 } as PropOptions<Header>,
   },
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.h1 {
+  font-size: 26px;
+}
+.h2 {
+  font-size: 24px;
+}
+.h3 {
+  font-size: 22px;
+}
+.h4 {
+  font-size: 20px;
+}
+.h5 {
+  font-size: 18px;
+}
+.h6 {
+  font-size: 16px;
+}
+</style>
