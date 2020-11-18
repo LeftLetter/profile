@@ -1,5 +1,9 @@
 .DS_Store
 
+# storybook
+.nuxt-storybook
+storybook-static
+
 # Logs
 logs
 *.log
