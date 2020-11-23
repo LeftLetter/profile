@@ -31,18 +31,18 @@ export default Vue.extend({
       },
     }
   },
-  methods: {
-    setColor(): void {
-      if (this.color) {
-        this.classes[this.color] = true
-      }
-    },
-    setSize(): void {
-      if (this.size) {
-        this.classes[this.size] = true
-      }
-    },
-  },
+  // methods: {
+  //   setColor(): void {
+  //     if (this.color) {
+  //       this.classes[this.color] = true
+  //     }
+  //   },
+  //   setSize(): void {
+  //     if (this.size) {
+  //       this.classes[this.size] = true
+  //     }
+  //   },
+  // },
 })
 </script>
 
