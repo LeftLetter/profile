@@ -37,13 +37,6 @@ export default Vue.extend({
       },
     }
   },
-  // methods: {
-  //   setShape(): void {
-  //     if (this.shape) {
-  //       this.classes[this.shape] = true
-  //     }
-  //   },
-  // },
 })
 </script>
 
