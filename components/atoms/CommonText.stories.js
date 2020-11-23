@@ -10,8 +10,12 @@ const sampleText = 'サンプルテキストです。'
 const Template = (args, { argTypes }) => ({
   components: { CommonText },
   props: Object.keys(argTypes),
-  template: '<CommonText :text="text" :color="color" :size="size" />',
+  template: '<CommonText :text="text" :color="color" :size="size"/>',
 })
+
+export const Default = Template.bind({})
+Default.args = { text: sampleText }
+Default.storyName = 'デフォルト'
 
 export const Small = Template.bind({})
 Small.args = { text: sampleText, size: 's' }
@@ -27,8 +31,8 @@ Large.storyName = '大きい文字'
 
 export const Warning = Template.bind({})
 Warning.args = { text: sampleText, color: 'warning' }
-Warning.storyName = 'ワーニング'
+Warning.storyName = 'ワーニングの色'
 
 export const Error = Template.bind({})
 Error.args = { text: sampleText, color: 'error' }
-Error.storyName = 'エラー'
+Error.storyName = 'エラーの色'
