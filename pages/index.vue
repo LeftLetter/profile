@@ -1,25 +1,24 @@
 <template>
   <div class="container">
     <!-- ユーザ -->
-    <div style="background-color: red; width: 100%; height: 100px"></div>
-    <UserArea></UserArea>
+    <UserArea class="user-area"></UserArea>
     <!-- リンク -->
-    <div style="background-color: blue; width: 100%; height: 100px"></div>
-    <LinkArea></LinkArea>
+    <LinkArea class="link-area"></LinkArea>
     <!-- アプリ -->
-    <div style="background-color: green; width: 100%; height: 100px"></div>
-    <AppArea></AppArea>
+    <AppArea class="app-area"></AppArea>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import UserArea from '@/components/organisms/UserArea.vue'
+import LinkArea from '@/components/organisms/LinkArea.vue'
 import AppArea from '@/components/organisms/AppArea.vue'
 
 export default Vue.extend({
   components: {
     UserArea,
+    LinkArea,
     AppArea,
   },
 })
@@ -33,5 +32,20 @@ export default Vue.extend({
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.user-area {
+  /* background-color: red; */
+  width: 100%;
+  height: 400px;
+}
+.link-area {
+  /* background-color: blue; */
+  width: 100%;
+  height: 200px;
+}
+.app-area {
+  /* background-color: green; */
+  width: 100%;
+  height: calc(100vh - 600px);
 }
 </style>
